@@ -49,4 +49,3 @@ Hybrid A* route planner with fuzzy speed control and reactive replanning under c
 
 - **GitHub:** [@lorenzodarioben-lgtm](https://github.com/lorenzodarioben-lgtm)
 - **Email:** lorenzodarioben@gmail.com
-- **LinkedIn:** Add your LinkedIn link here
