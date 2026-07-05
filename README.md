@@ -23,10 +23,10 @@ Computer Science student at Deakin University building tested full-stack, backen
 
 <p>
   <a href="mailto:lorenzodarioben@gmail.com">
-    <img src="https://img.shields.io/badge/Email-lorenzodarioben%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
   <a href="https://www.linkedin.com/in/lorenzo-dario-ben-922761327/">
-    <img src="https://img.shields.io/badge/LinkedIn-Lorenzo%20Dario%20Ben-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
   <img src="https://img.shields.io/badge/Portfolio-Coming%20Soon-6f42c1?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio coming soon" />
 </p>
