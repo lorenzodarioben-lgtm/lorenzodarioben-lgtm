@@ -28,5 +28,8 @@ Computer Science student at Deakin University building tested full-stack, backen
   <a href="https://www.linkedin.com/in/lorenzo-dario-ben-922761327/">
     <img src="https://img.shields.io/badge/-LinkedIn-6B97E0?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
+  <a href="https://leetcode.com/u/lorenzodarioben/">
+    <img src="https://img.shields.io/badge/-LeetCode-E8A84E?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode" />
+  </a>
   <img src="https://img.shields.io/badge/-Portfolio%20Coming%20Soon-199B92?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio coming soon" />
 </p>
