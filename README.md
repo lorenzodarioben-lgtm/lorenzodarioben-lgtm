@@ -18,7 +18,7 @@ Computer Science student at Deakin University building tested full-stack, backen
 - **Jenkins CI/CD Pipeline** - reproducible pipeline for a containerized Node.js service with tests, Docker builds, and smoke verification.
 - **Flask Shopping List** - Flask app with authentication, ownership-safe CRUD, Docker, Gunicorn, automated tests, and CI.
 - **Hybrid Delivery Router** - A* route planner with fuzzy speed control and reactive replanning.
-## Contact
+## Contact 
 
 <p align="center">
   <a href="mailto:lorenzodarioben@gmail.com"><img src="https://img.shields.io/badge/Email-D96860?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
