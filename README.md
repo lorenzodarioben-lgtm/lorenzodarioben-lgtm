@@ -8,7 +8,7 @@ Computer Science student at Deakin University building tested full-stack, backen
 - **Cloud & DevOps:** AWS, Docker, Kubernetes, Jenkins, GitHub Actions
 - **Backend:** REST APIs, authentication, databases, queues
 - **Quality:** automated tests, CI/CD, smoke checks, validation
-- **CS fundamentals:** C#, OOP, data structures, algorithms, state machines
+- **CS fundamentals:** C#, OOP, data structures, advanced algorithms, state machines
 
 ## Featured projects
 
