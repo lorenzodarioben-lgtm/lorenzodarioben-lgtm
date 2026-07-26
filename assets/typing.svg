@@ -1,0 +1,157 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="620"
+  height="50"
+  viewBox="0 0 620 50"
+>
+
+  <style>
+    text {
+      font-family: "Segoe UI", "Trebuchet MS", Arial, sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+
+    .reveal {
+      transform-box: fill-box;
+      transform-origin: left center;
+    }
+
+    #reveal-one {
+      animation: type-one 13.5s steps(15, end) infinite;
+    }
+
+    #reveal-two {
+      animation: type-two 13.5s steps(27, end) infinite;
+    }
+
+    #reveal-three {
+      animation: type-three 13.5s steps(35, end) infinite;
+    }
+
+    @keyframes type-one {
+      0% {
+        transform: scaleX(0);
+      }
+
+      14% {
+        transform: scaleX(1);
+      }
+
+      27% {
+        transform: scaleX(1);
+      }
+
+      30% {
+        transform: scaleX(0);
+      }
+
+      33.333%,
+      100% {
+        transform: scaleX(0);
+      }
+    }
+
+    @keyframes type-two {
+      0%,
+      33.334% {
+        transform: scaleX(0);
+      }
+
+      47.334% {
+        transform: scaleX(1);
+      }
+
+      60.334% {
+        transform: scaleX(1);
+      }
+
+      63.334% {
+        transform: scaleX(0);
+      }
+
+      66.666%,
+      100% {
+        transform: scaleX(0);
+      }
+    }
+
+    @keyframes type-three {
+      0%,
+      66.667% {
+        transform: scaleX(0);
+      }
+
+      80.667% {
+        transform: scaleX(1);
+      }
+
+      93.667% {
+        transform: scaleX(1);
+      }
+
+      96.667%,
+      100% {
+        transform: scaleX(0);
+      }
+    }
+  </style>
+
+  <defs>
+    <clipPath id="clip-one">
+      <rect
+        id="reveal-one"
+        class="reveal"
+        x="202"
+        y="0"
+        width="216"
+        height="50"
+      />
+    </clipPath>
+
+    <clipPath id="clip-two">
+      <rect
+        id="reveal-two"
+        class="reveal"
+        x="116"
+        y="0"
+        width="388"
+        height="50"
+      />
+    </clipPath>
+
+    <clipPath id="clip-three">
+      <rect
+        id="reveal-three"
+        class="reveal"
+        x="58"
+        y="0"
+        width="504"
+        height="50"
+      />
+    </clipPath>
+  </defs>
+
+  <text
+    x="310"
+    y="25"
+    fill="#00ddff"
+    clip-path="url(#clip-one)"
+  >(Hello, World!)</text>
+
+  <text
+    x="310"
+    y="25"
+    fill="#E8A84E"
+    clip-path="url(#clip-two)"
+  >Full-stack | Cloud | DevOps</text>
+
+  <text
+    x="310"
+    y="25"
+    fill="#10e384"
+    clip-path="url(#clip-three)"
+  >Building tested software that ships</text>
+</svg>
