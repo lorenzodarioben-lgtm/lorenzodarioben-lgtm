@@ -3,7 +3,15 @@
   width="620"
   height="50"
   viewBox="0 0 620 50"
+  role="img"
+  aria-labelledby="title description"
 >
+  <title id="title">Lorenzo Dario Ben developer introduction</title>
+
+  <desc id="description">
+    Animated typing text cycling through Hello World, Full-stack Cloud DevOps,
+    and Building tested software that ships.
+  </desc>
 
   <style>
     text {
@@ -94,6 +102,19 @@
 
       96.667%,
       100% {
+        transform: scaleX(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #reveal-one {
+        animation: none;
+        transform: scaleX(1);
+      }
+
+      #reveal-two,
+      #reveal-three {
+        animation: none;
         transform: scaleX(0);
       }
     }
