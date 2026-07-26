@@ -22,6 +22,10 @@ Computer Science student at Deakin University building tested full-stack, backen
   <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
 </p>
 
+I build full-stack applications and backend services, then test, containerize, and deploy them through cloud infrastructure and automated delivery pipelines.
+
+**Also working with:** Flask, Vue, C#, PostgreSQL, Redis, RabbitMQ, Jenkins, REST APIs, authentication, automated testing, data structures, and algorithms.
+
 ## Featured projects
 
 - **NBA Performance Explorer** - NBA analytics app with player search, profiles, charts, game logs, comparisons, and tests.
