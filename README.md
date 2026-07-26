@@ -1,5 +1,12 @@
 # Hi, I'm Lorenzo Dario Ben
 
+<div align="center">
+  <img
+    src="./assets/typing.svg"
+    alt="Animated introduction: Hello, World! Full-stack, Cloud and DevOps. Building tested software that ships."
+  />
+</div>
+
 Computer Science student at Deakin University building tested full-stack, backend, cloud, and DevOps projects.
 
 ## Focus
