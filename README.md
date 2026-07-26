@@ -26,14 +26,27 @@ I build full-stack applications and backend services, then test, containerize, a
 
 **Also working with:** Flask, Vue, C#, PostgreSQL, Redis, RabbitMQ, Jenkins, REST APIs, authentication, automated testing, data structures, and algorithms.
 
-## Featured projects
+## Featured Works
 
-- **NBA Performance Explorer** - NBA analytics app with player search, profiles, charts, game logs, comparisons, and tests.
-- **Healthcare Booking System** - cloud-native appointment platform using Node.js, Docker, Kubernetes, PostgreSQL, Redis, RabbitMQ, Prometheus, and Grafana.
-- **AWS WordPress CloudFormation** - two-AZ AWS infrastructure with CloudFormation, Auto Scaling, RDS, ALB, and Secrets Manager.
-- **Jenkins CI/CD Pipeline** - reproducible pipeline for a containerized Node.js service with tests, Docker builds, and smoke verification.
-- **Flask Shopping List** - Flask app with authentication, ownership-safe CRUD, Docker, Gunicorn, automated tests, and CI.
-- **Hybrid Delivery Router** - A* route planner with fuzzy speed control and reactive replanning.
+### [NBA Performance Explorer](https://github.com/lorenzodarioben-lgtm/nba-performance-explorer)
+
+`TypeScript` `React` `Data visualisation` `Automated testing`
+
+NBA analytics application with player search, career profiles, game logs, interactive charts, and player comparisons. Built with typed contracts and fixture-backed tests.
+
+### [AWS WordPress CloudFormation](https://github.com/lorenzodarioben-lgtm/aws-wordpress-cloudformation)
+
+`AWS` `CloudFormation` `Auto Scaling` `RDS` `Infrastructure as code`
+
+Reproducible two-stack AWS architecture using a custom VPC, public and private subnets, an Application Load Balancer, Auto Scaling, RDS, and S3 media offloading.
+
+### [Jenkins CI/CD Pipeline](https://github.com/lorenzodarioben-lgtm/jenkins-cicd-pipeline)
+
+`Jenkins` `Docker` `Node.js` `Testing` `CI/CD`
+
+Container delivery pipeline that tests a Node.js service, builds its Docker image, starts the container, and verifies the deployed health endpoint through an automated smoke check.
+
+> The pinned repositories below contain additional full-stack, Kubernetes, Flask, and algorithm-focused projects.
 
 ## Contact 
 
