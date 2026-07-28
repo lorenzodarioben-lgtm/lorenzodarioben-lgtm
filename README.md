@@ -7,7 +7,7 @@
   />
 </div>
 
-Computer Science student at Deakin University currently building tested full-stack, backend, cloud, and DevOps projects.
+Computer Science student at Deakin University building tested full-stack, backend, cloud, and DevOps projects.
 
 ## Core stack
 
