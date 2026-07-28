@@ -26,7 +26,13 @@ I build full-stack applications and backend services, then test, containerize, a
 
 **Also working with:** Flask, Vue, C#, PostgreSQL, Redis, RabbitMQ, Jenkins, REST APIs, authentication, automated testing, data structures, and algorithms.
 
-## Featured Works
+<p>
+  <img
+    src="./assets/featured-works-heading.svg"
+    width="100%"
+    alt="Featured Works"
+  />
+</p>
 
 ### [NBA Performance Explorer](https://github.com/lorenzodarioben-lgtm/nba-performance-explorer)
 
@@ -48,7 +54,13 @@ Container delivery pipeline that tests a Node.js service, builds its Docker imag
 
 > The pinned repositories below contain additional full-stack, Kubernetes, Flask, and algorithm-focused projects.
 
-## Contact 
+<p>
+  <img
+    src="./assets/contact-heading.svg"
+    width="100%"
+    alt="Contact"
+  />
+</p>
 
 <p align="center">
   <a href="mailto:lorenzodarioben@gmail.com"><img src="https://img.shields.io/badge/Email-D96860?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>

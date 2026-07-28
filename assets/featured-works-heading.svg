@@ -1,0 +1,246 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="900"
+  height="78"
+  viewBox="0 0 900 78"
+  preserveAspectRatio="xMinYMid meet"
+  role="img"
+  aria-labelledby="title description"
+>
+  <title id="title">Featured Works</title>
+  <desc id="description">
+    Featured Works heading with an animated cyber-style project divider.
+  </desc>
+
+  <defs>
+    <linearGradient
+      id="featured-gradient"
+      x1="0"
+      y1="0"
+      x2="900"
+      y2="0"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <filter
+      id="featured-glow"
+      x="-20%"
+      y="-100%"
+      width="140%"
+      height="300%"
+    >
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .heading {
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      fill: #1f2328;
+    }
+
+    .label {
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        "Courier New",
+        monospace;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      fill: #0969da;
+    }
+
+    .base-track {
+      stroke: #d0d7de;
+    }
+
+    .label-panel {
+      fill: #f6f8fa;
+      stroke: #d0d7de;
+    }
+
+    .node-ring {
+      fill: #ffffff;
+      stroke: #d0d7de;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .heading {
+        fill: #f0f6fc;
+      }
+
+      .label {
+        fill: #58a6ff;
+      }
+
+      .base-track {
+        stroke: #30363d;
+      }
+
+      .label-panel {
+        fill: #0d1117;
+        stroke: #30363d;
+      }
+
+      .node-ring {
+        fill: #0d1117;
+        stroke: #30363d;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .moving-pulse {
+        display: none;
+      }
+    }
+  </style>
+
+  <!-- Heading -->
+  <text
+    class="heading"
+    x="0"
+    y="29"
+  >Featured Works</text>
+
+  <!-- Small project label -->
+  <rect
+    class="label-panel"
+    x="194"
+    y="8"
+    width="154"
+    height="24"
+    rx="12"
+  />
+
+  <circle cx="210" cy="20" r="4" fill="#22d3ee">
+    <animate
+      attributeName="opacity"
+      values="0.35;1;0.35"
+      dur="1.8s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+  <text
+    class="label"
+    x="222"
+    y="24"
+  >SELECTED PROJECTS</text>
+
+  <!-- Animated status lights -->
+  <circle
+    class="node-ring"
+    cx="843"
+    cy="20"
+    r="7"
+  />
+  <circle cx="843" cy="20" r="3" fill="#22d3ee">
+    <animate
+      attributeName="opacity"
+      values="0.3;1;0.3"
+      dur="1.8s"
+      begin="0s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+  <circle
+    class="node-ring"
+    cx="864"
+    cy="20"
+    r="7"
+  />
+  <circle cx="864" cy="20" r="3" fill="#8b5cf6">
+    <animate
+      attributeName="opacity"
+      values="0.3;1;0.3"
+      dur="1.8s"
+      begin="0.3s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+  <circle
+    class="node-ring"
+    cx="885"
+    cy="20"
+    r="7"
+  />
+  <circle cx="885" cy="20" r="3" fill="#ec4899">
+    <animate
+      attributeName="opacity"
+      values="0.3;1;0.3"
+      dur="1.8s"
+      begin="0.6s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+  <!-- GitHub-style base line with angular circuit section -->
+  <path
+    class="base-track"
+    d="M0 60 H160 L176 48 H318 L334 60 H900"
+    fill="none"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Small circuit nodes -->
+  <circle
+    class="node-ring"
+    cx="176"
+    cy="48"
+    r="5"
+  />
+  <circle
+    class="node-ring"
+    cx="318"
+    cy="48"
+    r="5"
+  />
+
+  <circle cx="176" cy="48" r="2.5" fill="#22d3ee" />
+  <circle cx="318" cy="48" r="2.5" fill="#ec4899" />
+
+  <!-- Moving neon highlight -->
+  <path
+    class="moving-pulse"
+    d="M0 60 H160 L176 48 H318 L334 60 H900"
+    fill="none"
+    stroke="url(#featured-gradient)"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-dasharray="150 1100"
+    filter="url(#featured-glow)"
+  >
+    <animate
+      attributeName="stroke-dashoffset"
+      values="1250;0"
+      dur="3.4s"
+      repeatCount="indefinite"
+    />
+  </path>
+</svg>

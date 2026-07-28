@@ -1,178 +1,812 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  width="620"
-  height="50"
-  viewBox="0 0 620 50"
+  width="760"
+  height="104"
+  viewBox="0 0 760 104"
+  preserveAspectRatio="xMidYMid meet"
   role="img"
   aria-labelledby="title description"
 >
   <title id="title">Lorenzo Dario Ben developer introduction</title>
 
   <desc id="description">
-    Animated typing text cycling through Hello World, Full-stack Cloud DevOps,
-    and Building tested software that ships.
+    An animated TypeScript editor typing and backspacing Hello World,
+    Full-stack Cloud DevOps, and Building tested software that ships.
   </desc>
 
-  <style>
-    text {
-      font-family: "Segoe UI", "Trebuchet MS", Arial, sans-serif;
-      font-size: 24px;
-      font-weight: 600;
-      text-anchor: middle;
-      dominant-baseline: middle;
-    }
-
-    .reveal {
-      transform-box: fill-box;
-      transform-origin: left center;
-    }
-
-    #reveal-one {
-      animation: type-one 13.5s steps(15, end) infinite;
-    }
-
-    #reveal-two {
-      animation: type-two 13.5s steps(27, end) infinite;
-    }
-
-    #reveal-three {
-      animation: type-three 13.5s steps(35, end) infinite;
-    }
-
-    @keyframes type-one {
-      0% {
-        transform: scaleX(0);
-      }
-
-      14% {
-        transform: scaleX(1);
-      }
-
-      27% {
-        transform: scaleX(1);
-      }
-
-      30% {
-        transform: scaleX(0);
-      }
-
-      33.333%,
-      100% {
-        transform: scaleX(0);
-      }
-    }
-
-    @keyframes type-two {
-      0%,
-      33.334% {
-        transform: scaleX(0);
-      }
-
-      47.334% {
-        transform: scaleX(1);
-      }
-
-      60.334% {
-        transform: scaleX(1);
-      }
-
-      63.334% {
-        transform: scaleX(0);
-      }
-
-      66.666%,
-      100% {
-        transform: scaleX(0);
-      }
-    }
-
-    @keyframes type-three {
-      0%,
-      66.667% {
-        transform: scaleX(0);
-      }
-
-      80.667% {
-        transform: scaleX(1);
-      }
-
-      93.667% {
-        transform: scaleX(1);
-      }
-
-      96.667%,
-      100% {
-        transform: scaleX(0);
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      #reveal-one {
-        animation: none;
-        transform: scaleX(1);
-      }
-
-      #reveal-two,
-      #reveal-three {
-        animation: none;
-        transform: scaleX(0);
-      }
-    }
-  </style>
-
   <defs>
+    <filter
+      id="cursor-glow"
+      x="-300%"
+      y="-100%"
+      width="700%"
+      height="300%"
+    >
+      <feGaussianBlur stdDeviation="2" result="blur" />
+
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter
+      id="status-glow"
+      x="-250%"
+      y="-250%"
+      width="600%"
+      height="600%"
+    >
+      <feGaussianBlur stdDeviation="1.8" result="blur" />
+
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <linearGradient
+      id="bottom-gradient"
+      x1="0"
+      y1="0"
+      x2="760"
+      y2="0"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0%" stop-color="#58a6ff" />
+      <stop offset="50%" stop-color="#bc8cff" />
+      <stop offset="100%" stop-color="#3fb950" />
+    </linearGradient>
+
     <clipPath id="clip-one">
       <rect
         id="reveal-one"
-        class="reveal"
-        x="202"
-        y="0"
-        width="216"
-        height="50"
+        x="94"
+        y="37"
+        width="0"
+        height="32"
       />
     </clipPath>
 
     <clipPath id="clip-two">
       <rect
         id="reveal-two"
-        class="reveal"
-        x="116"
-        y="0"
-        width="388"
-        height="50"
+        x="94"
+        y="37"
+        width="0"
+        height="32"
       />
     </clipPath>
 
     <clipPath id="clip-three">
       <rect
         id="reveal-three"
-        class="reveal"
-        x="58"
-        y="0"
-        width="504"
-        height="50"
+        x="94"
+        y="37"
+        width="0"
+        height="32"
       />
     </clipPath>
   </defs>
 
+  <style>
+    .code-font {
+      font-family:
+        "Cascadia Code",
+        "Cascadia Mono",
+        "JetBrains Mono",
+        "Fira Code",
+        ui-monospace,
+        SFMono-Regular,
+        Consolas,
+        "Liberation Mono",
+        Menlo,
+        Monaco,
+        monospace;
+      font-variant-ligatures: none;
+    }
+
+    .code-line {
+      font-family:
+        "Cascadia Code",
+        "Cascadia Mono",
+        "JetBrains Mono",
+        "Fira Code",
+        ui-monospace,
+        SFMono-Regular,
+        Consolas,
+        "Liberation Mono",
+        Menlo,
+        Monaco,
+        monospace;
+      font-size: 20px;
+      font-weight: 500;
+      font-variant-ligatures: none;
+      dominant-baseline: middle;
+      white-space: pre;
+    }
+
+    .small-text {
+      font-family:
+        "Cascadia Code",
+        "Cascadia Mono",
+        "JetBrains Mono",
+        "Fira Code",
+        ui-monospace,
+        SFMono-Regular,
+        Consolas,
+        "Liberation Mono",
+        Menlo,
+        Monaco,
+        monospace;
+      font-size: 9px;
+      font-weight: 500;
+      font-variant-ligatures: none;
+    }
+
+    #reveal-one {
+      animation: type-one 13s steps(29, end) infinite;
+    }
+
+    #reveal-two {
+      animation: type-two 13s steps(30, end) infinite;
+    }
+
+    #reveal-three {
+      animation: type-three 13s steps(38, end) infinite;
+    }
+
+    #cursor-one-motion {
+      animation: cursor-one 13s steps(29, end) infinite;
+    }
+
+    #cursor-two-motion {
+      animation: cursor-two 13s steps(30, end) infinite;
+    }
+
+    #cursor-three-motion {
+      animation: cursor-three 13s steps(38, end) infinite;
+    }
+
+    .cursor-blink {
+      animation: cursor-blink 0.75s steps(1, end) infinite;
+    }
+
+    #phase-one {
+      animation: phase-one 13s linear infinite;
+    }
+
+    #phase-two {
+      animation: phase-two 13s linear infinite;
+    }
+
+    #phase-three {
+      animation: phase-three 13s linear infinite;
+    }
+
+    #online-dot {
+      animation: online-pulse 1.8s ease-in-out infinite;
+    }
+
+    #online-ring {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: online-ring 2.2s ease-out infinite;
+    }
+
+    #bottom-pulse {
+      animation: bottom-pulse 4s linear infinite;
+    }
+
+    @keyframes type-one {
+      0% {
+        width: 0;
+      }
+
+      14% {
+        width: 360px;
+      }
+
+      24% {
+        width: 360px;
+      }
+
+      32% {
+        width: 0;
+      }
+
+      32.001%,
+      100% {
+        width: 0;
+      }
+    }
+
+    @keyframes cursor-one {
+      0% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      14% {
+        opacity: 1;
+        transform: translateX(360px);
+      }
+
+      24% {
+        opacity: 1;
+        transform: translateX(360px);
+      }
+
+      32% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      32.001%,
+      100% {
+        opacity: 0;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes type-two {
+      0%,
+      33.332% {
+        width: 0;
+      }
+
+      33.333% {
+        width: 0;
+      }
+
+      47.333% {
+        width: 370px;
+      }
+
+      57.333% {
+        width: 370px;
+      }
+
+      65.333% {
+        width: 0;
+      }
+
+      65.334%,
+      100% {
+        width: 0;
+      }
+    }
+
+    @keyframes cursor-two {
+      0%,
+      33.332% {
+        opacity: 0;
+        transform: translateX(0);
+      }
+
+      33.333% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      47.333% {
+        opacity: 1;
+        transform: translateX(370px);
+      }
+
+      57.333% {
+        opacity: 1;
+        transform: translateX(370px);
+      }
+
+      65.333% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      65.334%,
+      100% {
+        opacity: 0;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes type-three {
+      0%,
+      66.665% {
+        width: 0;
+      }
+
+      66.666% {
+        width: 0;
+      }
+
+      80.666% {
+        width: 466px;
+      }
+
+      90.666% {
+        width: 466px;
+      }
+
+      98.666% {
+        width: 0;
+      }
+
+      98.667%,
+      100% {
+        width: 0;
+      }
+    }
+
+    @keyframes cursor-three {
+      0%,
+      66.665% {
+        opacity: 0;
+        transform: translateX(0);
+      }
+
+      66.666% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      80.666% {
+        opacity: 1;
+        transform: translateX(466px);
+      }
+
+      90.666% {
+        opacity: 1;
+        transform: translateX(466px);
+      }
+
+      98.666% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      98.667%,
+      100% {
+        opacity: 0;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes cursor-blink {
+      0%,
+      48% {
+        opacity: 1;
+      }
+
+      49%,
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes phase-one {
+      0%,
+      32% {
+        opacity: 1;
+      }
+
+      32.001%,
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes phase-two {
+      0%,
+      33.332% {
+        opacity: 0;
+      }
+
+      33.333%,
+      65.333% {
+        opacity: 1;
+      }
+
+      65.334%,
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes phase-three {
+      0%,
+      66.665% {
+        opacity: 0;
+      }
+
+      66.666%,
+      98.666% {
+        opacity: 1;
+      }
+
+      98.667%,
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes online-pulse {
+      0%,
+      100% {
+        opacity: 0.4;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes online-ring {
+      0% {
+        opacity: 0.55;
+        transform: scale(0.75);
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(1.9);
+      }
+    }
+
+    @keyframes bottom-pulse {
+      from {
+        stroke-dashoffset: 980;
+      }
+
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #reveal-one {
+        animation: none;
+        width: 360px;
+      }
+
+      #reveal-two,
+      #reveal-three {
+        animation: none;
+        width: 0;
+      }
+
+      #cursor-one-motion,
+      #cursor-two-motion,
+      #cursor-three-motion,
+      #online-ring,
+      #bottom-pulse {
+        display: none;
+      }
+
+      #phase-one {
+        animation: none;
+        opacity: 1;
+      }
+
+      #phase-two,
+      #phase-three {
+        animation: none;
+        opacity: 0;
+      }
+
+      #online-dot {
+        animation: none;
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <!-- Editor shell -->
+
+  <rect
+    x="1"
+    y="1"
+    width="758"
+    height="102"
+    rx="13"
+    fill="#0d1117"
+    stroke="#30363d"
+    stroke-width="1.5"
+  />
+
+  <!-- Editor title bar -->
+
+  <path
+    d="M14 1 H746 Q759 1 759 14 V29 H1 V14 Q1 1 14 1 Z"
+    fill="#161b22"
+  />
+
+  <line
+    x1="1"
+    y1="29"
+    x2="759"
+    y2="29"
+    stroke="#30363d"
+    stroke-width="1"
+  />
+
+  <!-- Window controls -->
+
+  <circle cx="17" cy="15" r="4" fill="#ff5f56" />
+  <circle cx="31" cy="15" r="4" fill="#ffbd2e" />
+  <circle cx="45" cy="15" r="4" fill="#27c93f" />
+
+  <!-- Active file tab -->
+
+  <path
+    d="M69 7 H183 Q190 7 190 14 V29 H69 Z"
+    fill="#0d1117"
+    stroke="#30363d"
+    stroke-width="1"
+  />
+
+  <line
+    x1="70"
+    y1="7"
+    x2="189"
+    y2="7"
+    stroke="#58a6ff"
+    stroke-width="2"
+  />
+
   <text
-    x="310"
-    y="25"
-    fill="#00ddff"
+    class="small-text"
+    x="82"
+    y="20"
+    fill="#3178c6"
+    font-weight="700"
+  >TS</text>
+
+  <text
+    class="small-text"
+    x="102"
+    y="20"
+    fill="#c9d1d9"
+  >profile.ts</text>
+
+  <!-- Ready indicator -->
+
+  <circle
+    id="online-ring"
+    cx="679"
+    cy="15"
+    r="4"
+    fill="none"
+    stroke="#3fb950"
+    stroke-width="1"
+  />
+
+  <circle
+    id="online-dot"
+    cx="679"
+    cy="15"
+    r="3"
+    fill="#3fb950"
+    filter="url(#status-glow)"
+  />
+
+  <text
+    class="small-text"
+    x="690"
+    y="18"
+    fill="#8b949e"
+    letter-spacing="0.7"
+  >READY</text>
+
+  <!-- Editor gutter -->
+
+  <rect
+    x="1"
+    y="30"
+    width="72"
+    height="53"
+    fill="#0d1117"
+  />
+
+  <line
+    x1="72"
+    y1="30"
+    x2="72"
+    y2="83"
+    stroke="#21262d"
+    stroke-width="1"
+  />
+
+  <text
+    class="code-font"
+    x="42"
+    y="59"
+    fill="#484f58"
+    font-size="13"
+    text-anchor="middle"
+    dominant-baseline="middle"
+  >1</text>
+
+  <!-- Indentation guide -->
+
+  <line
+    x1="88"
+    y1="37"
+    x2="88"
+    y2="72"
+    stroke="#21262d"
+    stroke-width="1"
+    stroke-dasharray="2 3"
+  />
+
+  <!-- Phrase one -->
+
+  <text
+    class="code-line"
+    x="94"
+    y="55"
+    textLength="360"
+    lengthAdjust="spacingAndGlyphs"
     clip-path="url(#clip-one)"
-  >(Hello, World!)</text>
+    xml:space="preserve"
+  ><tspan fill="#79c0ff">console</tspan><tspan fill="#c9d1d9">.</tspan><tspan fill="#d2a8ff">log</tspan><tspan fill="#c9d1d9">(</tspan><tspan fill="#a5d6ff">"Hello, World!"</tspan><tspan fill="#c9d1d9">);</tspan></text>
+
+  <g id="cursor-one-motion">
+    <rect
+      class="cursor-blink"
+      x="94"
+      y="42"
+      width="2.5"
+      height="25"
+      rx="1"
+      fill="#79c0ff"
+      filter="url(#cursor-glow)"
+    />
+  </g>
+
+  <!-- Phrase two -->
 
   <text
-    x="310"
-    y="25"
-    fill="#E8A84E"
+    class="code-line"
+    x="94"
+    y="55"
+    textLength="370"
+    lengthAdjust="spacingAndGlyphs"
+    fill="#8b949e"
     clip-path="url(#clip-two)"
-  >Full-stack | Cloud | DevOps</text>
+    xml:space="preserve"
+  >// Full-stack | Cloud | DevOps</text>
+
+  <g id="cursor-two-motion">
+    <rect
+      class="cursor-blink"
+      x="94"
+      y="42"
+      width="2.5"
+      height="25"
+      rx="1"
+      fill="#d2a8ff"
+      filter="url(#cursor-glow)"
+    />
+  </g>
+
+  <!-- Phrase three -->
 
   <text
-    x="310"
-    y="25"
-    fill="#10e384"
+    class="code-line"
+    x="94"
+    y="55"
+    textLength="466"
+    lengthAdjust="spacingAndGlyphs"
+    fill="#7ee787"
     clip-path="url(#clip-three)"
-  >Building tested software that ships</text>
+    xml:space="preserve"
+  >// Building tested software that ships</text>
+
+  <g id="cursor-three-motion">
+    <rect
+      class="cursor-blink"
+      x="94"
+      y="42"
+      width="2.5"
+      height="25"
+      rx="1"
+      fill="#7ee787"
+      filter="url(#cursor-glow)"
+    />
+  </g>
+
+  <!-- Status bar -->
+
+  <rect
+    x="1"
+    y="83"
+    width="758"
+    height="20"
+    fill="#161b22"
+  />
+
+  <path
+    d="M1 83 H759 V90 H1 Z"
+    fill="#161b22"
+  />
+
+  <line
+    x1="1"
+    y1="83"
+    x2="759"
+    y2="83"
+    stroke="#30363d"
+    stroke-width="1"
+  />
+
+  <!-- Animated bottom activity line -->
+
+  <line
+    id="bottom-pulse"
+    x1="2"
+    y1="83"
+    x2="758"
+    y2="83"
+    stroke="url(#bottom-gradient)"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-dasharray="100 880"
+    filter="url(#cursor-glow)"
+  />
+
+  <!-- Status-bar information -->
+
+  <circle cx="18" cy="93" r="3" fill="#3fb950" />
+
+  <text
+    class="small-text"
+    x="28"
+    y="96"
+    fill="#8b949e"
+  >main*</text>
+
+  <text
+    class="small-text"
+    x="560"
+    y="96"
+    fill="#8b949e"
+  >UTF-8</text>
+
+  <text
+    class="small-text"
+    x="607"
+    y="96"
+    fill="#8b949e"
+  >TypeScript</text>
+
+  <!-- Animated phrase counter -->
+
+  <text
+    id="phase-one"
+    class="small-text"
+    x="735"
+    y="96"
+    fill="#79c0ff"
+    text-anchor="end"
+  >01 / 03</text>
+
+  <text
+    id="phase-two"
+    class="small-text"
+    x="735"
+    y="96"
+    fill="#d2a8ff"
+    text-anchor="end"
+  >02 / 03</text>
+
+  <text
+    id="phase-three"
+    class="small-text"
+    x="735"
+    y="96"
+    fill="#7ee787"
+    text-anchor="end"
+  >03 / 03</text>
 </svg>
