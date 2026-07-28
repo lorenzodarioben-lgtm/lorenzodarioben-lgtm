@@ -42,7 +42,7 @@ NBA analytics application with player search, career profiles, game logs, intera
 
 ### [AWS WordPress CloudFormation](https://github.com/lorenzodarioben-lgtm/aws-wordpress-cloudformation)
 
-`AWS` `CloudFormation` `Auto Scaling` `RDS` `Infrastructure as code`
+`AWS` `CloudFormation` `Auto Scaling` `RDS` `Infrastructure as code` `Cloud Formation` 
 
 Reproducible two-stack AWS architecture using a custom VPC, public and private subnets, an Application Load Balancer, Auto Scaling, RDS, and S3 media offloading.
 
