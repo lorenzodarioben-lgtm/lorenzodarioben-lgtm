@@ -50,7 +50,7 @@ Reproducible two-stack AWS architecture using a custom VPC, public and private s
 
 `Jenkins` `Docker` `Node.js` `Testing` `CI/CD`
 
-Container delivery pipeline that tests a Node.js service, builds its Docker image, starts the container, and verifies the deployed health endpoint through an automated smoke check.
+Container delivery pipeline that tests Node.js services, builds Docker images, starts the containers, and verifies the deployed health endpoints through automated smoke checks.
 
 > The pinned repositories below contain additional full-stack, Kubernetes, Flask, and algorithm-focused projects.
 
